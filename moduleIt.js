@@ -1,3 +1,12 @@
-var getHTML = require('./http-functions');
+var getHTML = require('./http-functions').getHTML;
 
-console.log(getHTML);
+var requestOptions = {
+  host: 'sytantris.github.io',
+  path: '/http-examples/step4.html'
+};
+
+var afunct = function (html) {
+  console.log(html);
+}
+
+getHTML(requestOptions, afunct);
